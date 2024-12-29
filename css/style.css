@@ -9,19 +9,17 @@ body {
 
 .banner {
     width: 100%;
-    height: 500px; 
-    overflow: hidden; 
-    background: linear-gradient(to right, #27408B 50%, #FFBF00 50%) ;
-    justify-content: center; 
+    height: 50vh;
+    overflow: hidden;
+    background: linear-gradient(to right, #27408B 50%, #FFBF00 50%);
+    justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
 .banner img {
-    width: 15%; 
-    height: 100%; 
+    width: 15%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.6);
@@ -29,10 +27,10 @@ body {
 }
 
 .bannerdetail {
-    width: 100%; 
-    height: 400px; 
+    width: 100%;
+    height: auto;
     object-fit: contain;
-    background: linear-gradient(to right, #27408B 50%, #FFBF00 50%) ;
+    background: linear-gradient(to right, #27408B 50%, #FFBF00 50%);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.6);
     transition: all ease-in-out 0.5s;
@@ -56,35 +54,34 @@ body {
 }
 
 .container {
-    width: auto;
-    margin-bottom: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .container h2 {
-    font-size: 3em; 
-    font-weight: bold; 
-    margin-bottom: 10px; 
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .container h3 {
-    font-size: 2em; 
-    font-weight: bold; 
-    margin-bottom: 10px; 
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .container p {
-    font-size: 1em; 
-    margin-bottom: 20px; 
-    width: 100%; 
-    word-wrap: break-word; 
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 100%;
+    word-wrap: break-word;
     overflow-wrap: break-word;
     padding: 10px;
 }
-
 
 /* Header */
 .header {
@@ -97,7 +94,7 @@ body {
 .header h1 {
     margin: 0;
     font-size: 3em;
-    font-weight: bold;  
+    font-weight: bold;
     color: #FFBF00;
 }
 
@@ -127,10 +124,9 @@ body {
     font-weight: bold;
 }
 
-
 /* Table */
 table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     border-radius: 8px;
@@ -168,20 +164,20 @@ tr:hover {
     background-color: #27408B;
     padding: 10px;
     margin-bottom: 2px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: #ffffff;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
+    margin: 5px;
+    font-size: 1em;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
     color: #FFBF00;
 }
-
 
 /* Signup Button */
 .signup-btn {
@@ -200,46 +196,45 @@ tr:hover {
     color: #ffffff;
 }
 
-/*SIgn Up form*/
+/* Signup Form */
 .signup-form {
-    background-color: #fff; 
+    background-color: #fff;
     padding: 20px;
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    margin-top: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 .signup-form h3 {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 .signup-form label {
-    display: block; 
-    margin-bottom: 5px; 
+    display: block;
+    margin-bottom: 5px;
 }
 
 .signup-form input,
 .signup-form select,
 .signup-form textarea {
-    width: 100%; 
-    padding: 10px; 
-    margin-bottom: 15px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .signup-form button {
     background-color: #27408B;
-    color: white; 
-    padding: 10px 15px; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .signup-form button:hover {
     background-color: #FFBF00;
-
 }
 
 /* Footer */
@@ -257,4 +252,61 @@ tr:hover {
 .footer p {
     margin: 0;
     font-size: 1.1em;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #f8d7da;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner img {
+        width: 50%;
+    }
+
+    .navbar a {
+        font-size: 0.9em;
+        margin: 5px 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .banner img {
+        width: 80%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        font-size: 0.8em;
+    }
 }
